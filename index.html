@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="images/decaying-sun.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <title>Terhi Marttila</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div id="changingWelcome" onmousemove="changingWelcome()">
+      <h1 id="welcomeHeader"> Welcome, stranger.</h1>
+      <h3 id="vanishingInfo" style="text-align:center">I am<em id="glitchyTerhi" onmousemove="glitchyTerhi()" >Terhi Marttila</em></h3>
+    </div>
+
+    <div>
+      <h3><em>Terhi</em> has made these things:</h3>
+      <p># <a href="http://www.eingrund.de/we-cannot-take-them-all"><em>we-cannot-take-them-all</em> (2018-2019)</a></p>
+      <p># <a href="http://www.eingrund.de/"><em>Give Me a Reason</em> (2016)</a></p>
+      <p># <a href="http://cargocollective.com/terhimarttila/">Work completed in Montreal (2015)</a></p>
+      <p># <a href="http://terhimarttila.tumblr.com/">Work completed in Rovaniemi (2014)</a></p>
+    </div>
+
+    <div>
+      <h3><em>Terhi</em> has said these things:</h3>
+      <h2>2019</h2>
+      <p># Marttila, Terhi (2019) Linguistic accents and xenophobia in <em>we-cannot-take-them-all</em> -
+        Preliminary findings in the design of a voice interface.
+        At ENIAD 2019, Encontro de Investigação - Arte e Design,
+        1. - 3.10.2019,
+        Lisbon, Portugal.
+        <a href="presentations/marttila-2019-ENIAD.html">Slides</a> and
+        <a href="presentations/2019-ENIAD-MARTTILA-apresentacao.pdf">pdf</a></p>
+
+      <p># Marttila, Terhi (2019) <em>"Tell me a story, Siri."</em>
+        The voice as an emerging
+        medium for interaction in digital art, case studies of selected artworks.
+        At ELO 2019, Electronic Literature Organisation Conference,
+        15. - 17.7.2019.
+        Cork, Ireland.
+        <a href="presentations/marttila-2019-ELO.html">Slides</a></p>
+
+      <p># Marttila, Terhi (2019) From osmosis to diffusion -
+        migration as movement, digital art for dismantling membranes.
+        At Consciousness Reframed 2019,
+        6. - 8.6.2019.
+        Porto, Portugal.
+        <a href="presentations/marttila-2019-CR.html">Slides</a></p>
+    </div>
+
+    <script src="javascripts/scale.fix.js"></script>
+
+    <script>
+
+      var myVar = setInterval(vanishingText, 4000);
+      //setTimeout(vanishingText(), 2000);
+      //vanishingText();
+
+      function vanishingText(){
+        var infoText = document.getElementById("vanishingInfo").innerHTML;
+        var vanishingText = infoText.substr(1);
+        console.log(vanishingText);
+        document.getElementById("vanishingInfo").innerHTML = vanishingText;
+        if(document.getElementById("vanishingInfo").innerHTML == ""){
+          clearInterval(myVar);
+        }
+      }
+
+      //document.getElementById("changingWelcome").onmousemove = changingWelcome;
+
+      function changingWelcome(){
+        console.log("Got into changing welcome.");
+        var welcomeText = document.getElementById("welcomeHeader").textContent;
+        console.log("printing textcontent of h1:" + welcomeText);
+        if(welcomeText.includes("stranger")){
+          console.log("Got into changing stranger.");
+          var newWelcomeText = welcomeText.replace("stranger", "friend");
+          console.log("printing textcontent of h1:" + newWelcomeText);
+          document.getElementById("welcomeHeader").textContent = newWelcomeText;
+        }
+        if(welcomeText.includes("friend")){
+          var newWelcomeText = welcomeText.replace("friend", "stranger");
+          console.log(newWelcomeText);
+          document.getElementById("welcomeHeader").textContent = newWelcomeText;
+
+        }
+      }
+
+      function glitchyTerhi(){
+        document.getElementById("glitchyTerhi").textContent = " (((.  -  .)))";
+      }
+
+    </script>
+
+
+  </body>
+</html>
