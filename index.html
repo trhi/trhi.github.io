@@ -18,11 +18,11 @@
 
     <div id="changingWelcome" onmousemove="changingWelcome()">
       <h1 id="welcomeHeader"> Welcome, stranger.</h1>
-      <h3 id="vanishingInfo" style="text-align:center">I am<em id="glitchyTerhi" onmousemove="glitchyTerhi()" >Terhi Marttila</em></h3>
+      <h3 id="vanishingInfo" style="text-align:center">I am <em id="glitchyTerhi" onmousemove="glitchyTerhi()">Terhi Marttila</em></h3>
     </div>
 
     <div>
-      <h3><em>Terhi</em> has made these things:</h3>
+      <h3><em id="terhi" onmousemove="shuffleMe()">Terhi</em> has made these things:</h3>
       <p># <a href="we-cannot-take-them-all"><em>we-cannot-take-them-all</em> (2019)</a></p>
       <p># <a href="give-me-a-reason"><em>Give Me a Reason</em> (2016)</a></p>
       <p># <a href="http://cargocollective.com/terhimarttila/">Work completed in Montreal (2015)</a></p>
@@ -64,10 +64,18 @@
       //setTimeout(vanishingText(), 2000);
       //vanishingText();
 
+      function shuffleMe(){
+        var text = document.getElementById("terhi").innerHTML;
+        let shuffled = text.split('').sort(()=>(Math.random()-0.5)).join('');
+        console.log(shuffled);
+        document.getElementById("terhi").innerHTML = shuffled;
+
+      }
+
       function vanishingText(){
         var infoText = document.getElementById("vanishingInfo").innerHTML;
         var vanishingText = infoText.substr(1);
-        console.log(vanishingText);
+        //console.log(vanishingText);
         document.getElementById("vanishingInfo").innerHTML = vanishingText;
         if(document.getElementById("vanishingInfo").innerHTML == ""){
           clearInterval(myVar);
