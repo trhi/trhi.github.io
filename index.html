@@ -20,8 +20,9 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="pageBody">
 
+    <!--<p style="text-align:right; font-size:40px" id="informationIcon" onclick="displaySource()">info!</p>-->
     <p id="intentionallyBlank" class="blankPage">This page intentionally left blank</p>
     <p>
           <p>
@@ -75,8 +76,9 @@
         At ENIAD 2019, Encontro de Investigação - Arte e Design,
         1. - 3.10.2019,
         Lisbon, Portugal.
-        <a href="presentations/marttila-2019-ENIAD.html">Slides</a> and
-        <a href="presentations/Marttila-2019-ENIAD2019-linguistic-accents-and-xenophobia.pdf">pdf</a></p>
+        Slides <a href="presentations/marttila-2019-ENIAD.html">online</a> /
+        <a href="presentations/Marttila-2019-ENIAD2019-linguistic-accents-and-xenophobia.pdf">pdf</a>.
+      </p>
 
       <p># Marttila, Terhi (2019) <em>"Tell me a story, Siri."</em>
         The voice as an emerging
@@ -84,8 +86,9 @@
         At ELO 2019, Electronic Literature Organisation Conference,
         15. - 17.7.2019.
         Cork, Ireland.
-        <a href="presentations/marttila-2019-ELO.html">Slides</a> and
-        <a href="presentations/Marttila-2019-ELO2019-Tell me a story Siri.pdf">pdf</a></p>
+        Slides <a href="presentations/marttila-2019-ELO.html">online</a> /
+        <a href="presentations/Marttila-2019-ELO2019-Tell me a story Siri.pdf">pdf</a>.
+      </p>
 
 
       <p># Marttila, Terhi (2019) From osmosis to diffusion -
@@ -93,30 +96,124 @@
         At Consciousness Reframed 2019,
         6. - 8.6.2019.
         Porto, Portugal.
-        <a href="presentations/marttila-2019-CR.html">Slides</a> and
-        <a href="presentations/Marttila-2019-CR2019-From osmosis to diffusion.pdf">pdf</a></p>
+        Slides <a href="presentations/marttila-2019-CR.html">online</a> /
+        <a href="presentations/Marttila-2019-CR2019-From osmosis to diffusion.pdf">pdf</a>.
+      </p>
 
         <h2>2018</h2>
         <p># Marttila, Terhi (2018) Chatting as interface in gaming - case example: Bury me, my love.
           At Videojogos 2018, Portuguese national conference on videogames
           21.11.2018,
           Porto, Portugal.
-          <a href="presentations/Marttila-2018-VJ2018-presentation-Chatting-as-interface-in-gaming-case-example-bury-me-my-love.pdf">Presentation</a> and
-          <a href="presentations/Marttila-2018-VJ2018-paper-Chatting as interface in gaming — case example-Bury me my love.pdf">Paper</a></p>
+          Presentation <a href="presentations/Marttila-2018-VJ2018-presentation-Chatting-as-interface-in-gaming-case-example-bury-me-my-love.pdf">pdf</a> and paper
+          <a href="presentations/Marttila-2018-VJ2018-paper-Chatting as interface in gaming — case example-Bury me my love.pdf">pdf</a>.
+        </p>
 
 
         <p># Marttila, Terhi (2018) Playful readings and deeper meanings.
           At ICLI 2018, International Conference on Live Interfaces, Doctoral Symposium,
           14. - 16.6.2018,
           Porto, Portugal.
-          <a href="presentations/Marttila-2018-ICLI2018-presentation-Doctoral-Symposium-Playful-readings-and-deeper-meanings.pdf">Presentation</a> and
-          <a href="presentations/Marttila-2018-ICLI2018-paper-playful-readings-and-deeper-meanings-ICLI2018-proceedings-234-236.pdf">Paper</a></p>
+          Presentation <a href="presentations/Marttila-2018-ICLI2018-presentation-Doctoral-Symposium-Playful-readings-and-deeper-meanings.pdf">pdf</a> and paper
+          <a href="presentations/Marttila-2018-ICLI2018-paper-playful-readings-and-deeper-meanings-ICLI2018-proceedings-234-236.pdf">pdf</a>.
+        </p>
+
+          <h2>2017</h2>
+          <p># Marttila, Terhi (2017) Give me a reason - Encouraging dialogue
+            through interactive media,
+            Proceedings of InSEA 2017, International Society for Education in the Arts,
+            <em>(Unable to present in person)</em>,
+            7. - 11.8.2017,
+            Daegu, South Korea.
+            Paper <a href="presentations/Marttila-2017-give-me-a-reason-encouraging-dialogue-through-interactive-media.pdf">pdf</a>.
+          </p>
+
+
+          <h2>2016</h2>
+          <p># Marttila, Terhi (2016) Give me a reason - Three Cycles of
+            Dialogical Art-based Action Research to Support a
+            Community of Volunteers Who Work With Migrants,
+            MA Thesis (Art Education),
+            2016,
+            Rovaniemi, Finland.
+            Thesis <a href="presentations/Marttila-2016-MA-thesis-give-me-a-reason.pdf">pdf</a> and in the
+            <a href="https://lauda.ulapland.fi/handle/10024/62451">university thesis database</a>.</p>
 
     </div>
 
     <script src="javascripts/scale.fix.js"></script>
 
     <script>
+
+/*
+      function displaySource(){
+        //this is kind of anti-information, but it is kind of information
+
+        document.getElementById("pageBody").textContent =
+        '    <div id="changingWelcome" onmousemove="changingWelcome()">" '+
+              '<h1 id="welcomeHeader"> Welcome, stranger.</h1>' +
+              '<h3 id="vanishingInfo" style="text-align:center">I am Terhi Marttila</h3> ' +
+
+
+            '</div>' +
+
+            '<div>' +
+              '<h3 class="topMargin"><em id="terhi" onmousemove="shuffleMe()">Terhi</em> has made these things:</h3> '+
+              '<p># <a href="we-cannot-take-them-all"><em>we-cannot-take-them-all</em> (2019)</a></p>' +
+            '  <p># <a href="give-me-a-reason"><em>Give Me a Reason</em> (2016)</a></p>' +
+            '  <p>[ # <a href="http://cargocollective.com/terhimarttila/">Work completed in Montreal (2015)</a> // class="digital portfolio"  ]</p> ' +
+            '  <p>[ # <a href="http://terhimarttila.tumblr.com/">Work completed in Rovaniemi (2014)</a> // class="digital portfolio"  ]</p> ' +
+          '  </div> ' +
+
+          '  <div> ' +
+            '  <h3 class="topMargin"><em>Terhi</em> has said these things:</h3> ' +
+            '  <h2>2019</h2> ' +
+            '  <p># Marttila, Terhi (2019) Linguistic accents and xenophobia in <em>we-cannot-take-them-all</em> - ' +
+              '  Preliminary findings in the design of a voice interface.' +
+              '  At ENIAD 2019, Encontro de Investigação - Arte e Design,' +
+              '  1. - 3.10.2019,' +
+              '  Lisbon, Portugal.' +
+              '  <a href="presentations/marttila-2019-ENIAD.html">Slides</a> and' +
+              '  <a href="presentations/Marttila-2019-ENIAD2019-linguistic-accents-and-xenophobia.pdf">pdf</a></p>' +
+
+              '<p># Marttila, Terhi (2019) <em>"Tell me a story, Siri."</em>' +
+              '  The voice as an emerging' +
+              '  medium for interaction in digital art, case studies of selected artworks.' +
+              '  At ELO 2019, Electronic Literature Organisation Conference,' +
+              '  15. - 17.7.2019.' +
+              '  Cork, Ireland.' +
+              '  <a href="presentations/marttila-2019-ELO.html">Slides</a> and' +
+              '  <a href="presentations/Marttila-2019-ELO2019-Tell me a story Siri.pdf">pdf</a></p>' +
+
+
+            '  <p># Marttila, Terhi (2019) From osmosis to diffusion -' +
+            '    migration as movement, digital art for dismantling membranes.' +
+              '  At Consciousness Reframed 2019,' +
+              '  6. - 8.6.2019.' +
+              '  Porto, Portugal.' +
+              '  <a href="presentations/marttila-2019-CR.html">Slides</a> and' +
+              '  <a href="presentations/Marttila-2019-CR2019-From osmosis to diffusion.pdf">pdf</a></p>' +
+
+              '  <h2>2018</h2>' +
+              '  <p># Marttila, Terhi (2018) Chatting as interface in gaming - case example: Bury me, my love.' +
+              '    At Videojogos 2018, Portuguese national conference on videogames' +
+                '  21.11.2018,' +
+                '  Porto, Portugal.' +
+                '  <a href="presentations/Marttila-2018-VJ2018-presentation-Chatting-as-interface-in-gaming-case-example-bury-me-my-love.pdf">Presentation</a> and' +
+                '  <a href="presentations/Marttila-2018-VJ2018-paper-Chatting as interface in gaming — case example-Bury me my love.pdf">Paper</a></p>' +
+
+
+                '<p># Marttila, Terhi (2018) Playful readings and deeper meanings.' +
+                '  At ICLI 2018, International Conference on Live Interfaces, Doctoral Symposium,' +
+                '  14. - 16.6.2018,' +
+                '  Porto, Portugal.' +
+                '  <a href="presentations/Marttila-2018-ICLI2018-presentation-Doctoral-Symposium-Playful-readings-and-deeper-meanings.pdf">Presentation</a> and' +
+                '  <a href="presentations/Marttila-2018-ICLI2018-paper-playful-readings-and-deeper-meanings-ICLI2018-proceedings-234-236.pdf">Paper</a></p>' +
+
+          '  </div>';
+
+      }
+      */
 
       $("#intentionallyBlank").fadeOut(30000);
 
