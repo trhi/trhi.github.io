@@ -7,6 +7,8 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
+    <script language="javascript" type="text/javascript" src="library/p5.min.js"></script>
+
     <link rel="icon" type="image/x-icon" href="images/decaying-sun.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -61,12 +63,14 @@
                                                                                                                                                                       <p>
                                                                                                                                                                             <p>
                                                                                                                                                                                   <p>
-<h1 style="color:white">Hi! I am Terhis web page. Terhi is warpping up her
+<h1 style="color:#ededed" id="concealMe" onmousemove="concealInfo()">Hi! I am Terhis web page. Terhi is warpping up her
   PhD in digital media at the University of Porto in Portugal. It's part
   artistic practice, part research, to find some questions and to question some
   answers about voice interfaces in digital art (about migration). You can
   contact Terhi at firstname . lastname @ that most common of email service
   provider in the world . com</h1>
+  <p>
+    <p>
 
     <div id="changingWelcome" onmousemove="changingWelcome()">
       <h1 id="welcomeHeader"> Welcome, stranger.</h1>
@@ -74,7 +78,8 @@
     </div>
 
     <div>
-      <h3 class="topMargin" data-nosnippet><em id="terhi" onmousemove="shuffleMe()">Terhi</em> has made these things:</h3>
+      <h3 class="topMargin" data-nosnippet><em id="terhi" onmousemove="shuffleMe2()">Terhi</em> has made these things:</h3>
+      <p># <a href="https://www.raum.pt/terhi-marttila"><em>Speak out</em> (2020)</a>, online residency curated by Patrícia Gouveia at <a href="https://www.raum.pt">raum.pt</a></p>
       <p># <a href="we-cannot-take-them-all"><em>we-cannot-take-them-all</em> (2019)</a></p>
       <p># <a href="give-me-a-reason"><em>Give Me a Reason</em> (2016)</a></p>
       <p>[ # <a href="http://cargocollective.com/terhimarttila/">Work completed in Montreal (2015)</a> // class="digital portfolio"  ]</p>
@@ -85,7 +90,7 @@
 
 
     <div>
-      <h3 class="topMargin" data-nosnippet><em>Terhi</em> has said thought about and publicly said these things:</h3>
+      <h3 class="topMargin" data-nosnippet><em id="terhi2" onmousemove="shuffleMe2()">Terhi</em> has said thought about and publicly said these things:</h3>
 
       <h2>2020</h2>
       <p># Marttila, Terhi (2020) Dimensions of authorship in the (co-)creation of
@@ -173,76 +178,6 @@
 
     <script>
 
-/*
-      function displaySource(){
-        //this is kind of anti-information, but it is kind of information
-
-        document.getElementById("pageBody").textContent =
-        '    <div id="changingWelcome" onmousemove="changingWelcome()">" '+
-              '<h1 id="welcomeHeader"> Welcome, stranger.</h1>' +
-              '<h3 id="vanishingInfo" style="text-align:center">I am Terhi Marttila</h3> ' +
-
-
-            '</div>' +
-
-            '<div>' +
-              '<h3 class="topMargin"><em id="terhi" onmousemove="shuffleMe()">Terhi</em> has made these things:</h3> '+
-              '<p># <a href="we-cannot-take-them-all"><em>we-cannot-take-them-all</em> (2019)</a></p>' +
-            '  <p># <a href="give-me-a-reason"><em>Give Me a Reason</em> (2016)</a></p>' +
-            '  <p>[ # <a href="http://cargocollective.com/terhimarttila/">Work completed in Montreal (2015)</a> // class="digital portfolio"  ]</p> ' +
-            '  <p>[ # <a href="http://terhimarttila.tumblr.com/">Work completed in Rovaniemi (2014)</a> // class="digital portfolio"  ]</p> ' +
-          '  </div> ' +
-
-          '  <div> ' +
-            '  <h3 class="topMargin"><em>Terhi</em> has said these things:</h3> ' +
-            '  <h2>2019</h2> ' +
-            '  <p># Marttila, Terhi (2019) Linguistic accents and xenophobia in <em>we-cannot-take-them-all</em> - ' +
-              '  Preliminary findings in the design of a voice interface.' +
-              '  At ENIAD 2019, Encontro de Investigação - Arte e Design,' +
-              '  1. - 3.10.2019,' +
-              '  Lisbon, Portugal.' +
-              '  <a href="presentations/marttila-2019-ENIAD.html">Slides</a> and' +
-              '  <a href="presentations/Marttila-2019-ENIAD2019-linguistic-accents-and-xenophobia.pdf">pdf</a></p>' +
-
-              '<p># Marttila, Terhi (2019) <em>"Tell me a story, Siri."</em>' +
-              '  The voice as an emerging' +
-              '  medium for interaction in digital art, case studies of selected artworks.' +
-              '  At ELO 2019, Electronic Literature Organisation Conference,' +
-              '  15. - 17.7.2019.' +
-              '  Cork, Ireland.' +
-              '  <a href="presentations/marttila-2019-ELO.html">Slides</a> and' +
-              '  <a href="presentations/Marttila-2019-ELO2019-Tell me a story Siri.pdf">pdf</a></p>' +
-
-
-            '  <p># Marttila, Terhi (2019) From osmosis to diffusion -' +
-            '    migration as movement, digital art for dismantling membranes.' +
-              '  At Consciousness Reframed 2019,' +
-              '  6. - 8.6.2019.' +
-              '  Porto, Portugal.' +
-              '  <a href="presentations/marttila-2019-CR.html">Slides</a> and' +
-              '  <a href="presentations/Marttila-2019-CR2019-From osmosis to diffusion.pdf">pdf</a></p>' +
-
-              '  <h2>2018</h2>' +
-              '  <p># Marttila, Terhi (2018) Chatting as interface in gaming - case example: Bury me, my love.' +
-              '    At Videojogos 2018, Portuguese national conference on videogames' +
-                '  21.11.2018,' +
-                '  Porto, Portugal.' +
-                '  <a href="presentations/Marttila-2018-VJ2018-presentation-Chatting-as-interface-in-gaming-case-example-bury-me-my-love.pdf">Presentation</a> and' +
-                '  <a href="presentations/Marttila-2018-VJ2018-paper-Chatting as interface in gaming — case example-Bury me my love.pdf">Paper</a></p>' +
-
-
-                '<p># Marttila, Terhi (2018) Playful readings and deeper meanings.' +
-                '  At ICLI 2018, International Conference on Live Interfaces, Doctoral Symposium,' +
-                '  14. - 16.6.2018,' +
-                '  Porto, Portugal.' +
-                '  <a href="presentations/Marttila-2018-ICLI2018-presentation-Doctoral-Symposium-Playful-readings-and-deeper-meanings.pdf">Presentation</a> and' +
-                '  <a href="presentations/Marttila-2018-ICLI2018-paper-playful-readings-and-deeper-meanings-ICLI2018-proceedings-234-236.pdf">Paper</a></p>' +
-
-          '  </div>';
-
-      }
-      */
-
       $("#intentionallyBlank").fadeOut(30000);
 
       var myVar = setInterval(vanishingText, 4000);
@@ -251,10 +186,22 @@
 
       function shuffleMe(){
         var text = document.getElementById("terhi").innerHTML;
+        //var text2 = this.innerHTML;
+        //console.log("This is what I get if I say this.innerHTML: " + text2);
         let shuffled = text.split('').sort(()=>(Math.random()-0.5)).join('');
         console.log(shuffled);
         document.getElementById("terhi").innerHTML = shuffled;
+      }
 
+      function shuffleMe2(){
+        var terhis = ["Terhi", "Terhi", "Terhi", "Tehri", "Theri", "Terih"];
+        //document.getElementById("terhi2").innerHTML = random(terhis);
+        document.getElementById("terhi").innerHTML = terhis[Math.floor(Math.random()*terhis.length)];
+        document.getElementById("terhi2").innerHTML = terhis[Math.floor(Math.random()*terhis.length)];
+      }
+
+      function concealInfo(){
+        $("#concealMe").fadeOut(30000);
       }
 
       function vanishingText(){
