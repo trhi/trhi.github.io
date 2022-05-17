@@ -32,34 +32,38 @@
   </head>
   <body id="pageBody">
 
+    <script>
+
+    var thispageintentionallyleftblank =
+    //just some humor for those of us who read a lot:
+    //This page intentionally left blank =
+    [
+      "This page, blank, left intentionally",
+      "This page, intentionally blank, left",
+      "This blank page left intentionally",
+      "This blank page left, intentionally",
+      "This blank page, left intentionally",
+      "This blank page, left, intentionally",
+      "This intentionally left, blank page",
+      "This intentionally blank, left page",
+      "This intentionally blank page left",
+      "This left page, intentionally blank",
+      "This left intentionally: page, blank",
+      "This left intentionally, blank page",
+    ];
+
+      function setup() {
+      //let randomText = random(thispageintentionallyleftblank);
+      //console.log(randomText);
+      $("#intentionallyBlank").text(random(thispageintentionallyleftblank));
+    }
+    </script>
+
+
+<div id="intentionallyBlank-div">
     <!--<p style="text-align:right; font-size:40px" id="informationIcon" onclick="displaySource()">info!</p>-->
-    <p style="align:left;" class="blankPage"><span id="intentionallyBlank"></span><span><button id="intentionallyBlank-o" title="scramble" style="font-size: 20px; cursor:pointer; background:none; border:none;" onclick='$("#intentionallyBlank").text(random(thispageintentionallyleftblank));'> &nbsp ☉ </button></span></p>
-  <script>
+    <p style="align:left;" class="blankPage"><span id="intentionallyBlank"></span><span><button title="scramble" style="font-size: 20px; cursor:pointer; background:none; border:none;" onclick='$("#intentionallyBlank").text(random(thispageintentionallyleftblank));'> &nbsp ☉ </button></span></p>
 
-  var thispageintentionallyleftblank =
-  //just some humor for those of us who read a lot:
-  //This page intentionally left blank =
-  [
-    "This page, blank, left intentionally",
-    "This page, intentionally blank, left",
-    "This blank page left intentionally",
-    "This blank page left, intentionally",
-    "This blank page, left intentionally",
-    "This blank page, left, intentionally",
-    "This intentionally left, blank page",
-    "This intentionally blank, left page",
-    "This intentionally blank page left",
-    "This left page, intentionally blank",
-    "This left intentionally: page, blank",
-    "This left intentionally, blank page",
-  ];
-
-    function setup() {
-    //let randomText = random(thispageintentionallyleftblank);
-    //console.log(randomText);
-    $("#intentionallyBlank").text(random(thispageintentionallyleftblank));
-  }
-  </script>
     <p>
           <p>
                 <p>
@@ -90,19 +94,27 @@
                                                                                                                                                                       <p>
                                                                                                                                                                             <p>
                                                                                                                                                                                   <p>
-<h1 style="color:#ededed" id="concealMe" onmousemove="concealInfo()">Hi! I am Terhi's personal web page. A hand
-  built old school representation of Terhi on the world wide web. Terhi is warpping up her
-  PhD in digital media at the University of Porto in Portugal. It's part
-  artistic practice, part research, to find some questions and to question some
-  answers about voice interfaces in digital art (about migration). You can
-  contact Terhi at firstname . lastname @ that most common email service
-  provider in the world . com</h1>
+</div>
+<h1 style="color:#ededed" id="concealMe" onmousemove="concealInfo()">Hi!
+  I am Terhi's personal web page. A hand-built, old school representation
+  of Terhi
+  on the world wide web.
+  Terhi is wrapping up her
+  PhD in digital media at the University of Porto in Portugal.
+  It's artistic research
+  to find some questions
+  and to question some answers
+  about some of the many things that emerge when we think through: voice / interfaces, migration.
+  You can contact Terhi
+  at firstnamelastname @ that most common email service provider in the world . com
+  but make sure you spell her firstname right
+  (it is difficult for non-Finnish speakers).</h1>
   <p>
     <p>
 
     <div id="changingWelcome" onmousemove="changingWelcome()">
       <h1 style="margin-top: 2cm;" id="welcomeHeader"> Welcome, stranger.</h1>
-      <h3 id="vanishingInfo" style="text-align:center">I am Terhi Marttila</h3>
+      <h3 id="vanishingInfo" style="text-align:center">I believe (I am) Terhi Marttila</h3>
     </div>
 
     <div>
@@ -219,8 +231,7 @@
 
     <script>
 
-      $("#intentionallyBlank").fadeOut(30000);
-      $("#intentionallyBlank-o").fadeOut(30000);
+      $("#intentionallyBlank-div").fadeOut(30000);
 
       var myVar = setInterval(vanishingText, 4000);
       //setTimeout(vanishingText(), 2000);
