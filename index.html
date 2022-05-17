@@ -33,7 +33,33 @@
   <body id="pageBody">
 
     <!--<p style="text-align:right; font-size:40px" id="informationIcon" onclick="displaySource()">info!</p>-->
-    <p style="align:left;" id="intentionallyBlank" class="blankPage">This intentionally left, blank page</p>
+    <p style="align:left;" class="blankPage"><span id="intentionallyBlank"></span><span><button id="intentionallyBlank-o" title="scramble" style="font-size: 20px; cursor:pointer; background:none; border:none;" onclick='$("#intentionallyBlank").text(random(thispageintentionallyleftblank));'> &nbsp ☉ </button></span></p>
+  <script>
+
+  var thispageintentionallyleftblank =
+  //just some humor for those of us who read a lot:
+  //This page intentionally left blank =
+  [
+    "This page, blank, left intentionally",
+    "This page, intentionally blank, left",
+    "This blank page left intentionally",
+    "This blank page left, intentionally",
+    "This blank page, left intentionally",
+    "This blank page, left, intentionally",
+    "This intentionally left, blank page",
+    "This intentionally blank, left page",
+    "This intentionally blank page left",
+    "This left page, intentionally blank",
+    "This left intentionally: page, blank",
+    "This left intentionally, blank page",
+  ];
+
+    function setup() {
+    //let randomText = random(thispageintentionallyleftblank);
+    //console.log(randomText);
+    $("#intentionallyBlank").text(random(thispageintentionallyleftblank));
+  }
+  </script>
     <p>
           <p>
                 <p>
@@ -194,6 +220,7 @@
     <script>
 
       $("#intentionallyBlank").fadeOut(30000);
+      $("#intentionallyBlank-o").fadeOut(30000);
 
       var myVar = setInterval(vanishingText, 4000);
       //setTimeout(vanishingText(), 2000);
